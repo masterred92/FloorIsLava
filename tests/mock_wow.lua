@@ -41,6 +41,8 @@ function M.install(env)
   env.GetTime = function() return M.clock end
   env.GetBuildInfo = function() return "1.60.1", "70374", "Oct 13 2026", 16001 end
   env.GetLocale = function() return "enUS" end
+  env.C_DamageMeter = { IsDamageMeterAvailable = function() return true end, GetAvailableCombatSessions = function() return {} end,
+    GetCombatSessionFromID = function() end, GetCombatSessionFromType = function() end } -- tests replace these
   env.GetRealmName = function() return "TestRealm" end
   env.UnitName = function(u) if u == "player" then return "Kenny" end end
   env.UnitGUID = function(u) if u == "player" then return "Player-1-0001" end end
@@ -100,6 +102,7 @@ function M.loadAddon(dir, name)
   local ns = {}
   for line in io.lines(dir .. "/" .. name .. ".toc") do
     line = line:gsub("\r", "")
+    line = line:gsub("\\", "/")
     if line:match("%.lua$") then assert(loadfile(dir .. "/" .. line))(name, ns) end
   end
   M.fire("ADDON_LOADED", name)

@@ -6,6 +6,10 @@ Host checkouts used (cloned under /workspace/wow-hosts on 2026-10-26):
   LibDataBroker-1.1, TomTom 4.3.13, Bagnon 12.1.7.
 """
 HOST = {
+    "KennyPriceLog": "our own PriceLog addon (github.com/masterred92/PriceLog), optional",
+    "KennyMatTooltip": "our own MatTooltip addon (github.com/masterred92/MatTooltip), optional",
+    "KennyNeutralFlip": "our own NeutralFlip addon (github.com/masterred92/NeutralFlip)",
+    "KennyGoldPerSpot": "our own GoldPerSpot addon (github.com/masterred92/GoldPerSpot)",
     "PlaySoundFile": "client API; used on 16001 by BigWigs Core/PluginPrototype.lua and DBM (not in Blizzard's own UI source)",
     "DBM": "DBM-Core global (DBM-Core.lua); RegisterCallback/CreateBreakTimer/CreatePullTimer/CreatePizzaTimer/ReleaseRevision",
     "BigWigsLoader": "BigWigs Loader.lua global; RegisterMessage, GetReleaseString",
@@ -17,6 +21,10 @@ HOST = {
     "TomTom": "TomTom global (TomTom.lua); TomTom:AddWaypoint(mapID, x, y, opts)",
     "Bagnon": "Bagnon global (Bagnon addon); Bagnon.Item.Update",
     "BagBrother": "BagBrother global (BagBrother addon, Bagnon's item data)",
+    "KennyDwarfExplorersBible": "our own Dwarf Explorer's Bible addon (github.com/masterred92/DwarfExplorersBible)",
+    "Auctionator": "Auctionator global; Auctionator.API.v1.GetAuctionPriceByItemID(callerID, itemID) in Source/API/v1/GetAuctionPrice.lua (Forever build 341)",
+    "TSM_API": "TradeSkillMaster global; TSM_API.GetCustomPriceValue(customPriceStr, itemString) in Core/API.lua (no Forever build yet)",
+    "AucAdvanced": "Auctioneer global; AucAdvanced.API.GetMarketValue(itemLink, serverKey) in Auc-Advanced/CoreAPI.lua (Auctioneer (Forever) 4.0.0)",
 }
 HOST_METHODS = {
     "RegisterCallback": "DBM:RegisterCallback(event, func) DBM-Core.lua",

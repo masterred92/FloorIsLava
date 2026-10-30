@@ -2,7 +2,7 @@
 ## Title: Floor is Lava
 ## Notes: Details! plugin: after each fight, crowns whoever took the most avoidable damage. Uses the game's own damage meter.
 ## Author: Kenny
-## Version: 1.0.0
+## Version: 1.0.1
 ## SavedVariables: FloorIsLavaDB
 ## Dependencies: Details
 ## X-License: MIT
@@ -12,5 +12,9 @@
 # X-Curse-Project-ID: (added when the CurseForge project exists)
 # X-Wago-ID: (added when the Wago project exists)
 
+Libs\KennyShared\Compat.lua
+Libs\KennyShared\Core.lua
+Libs\KennyShared\Hub.lua
+Locales\enUS.lua
 Lava.lua
 Board.lua

@@ -106,17 +106,27 @@ function Lava.TopTally(n)
   return out
 end
 
+ns.Core.Setup({ cmd = "/lava",
+  required = { "C_DamageMeter.IsDamageMeterAvailable", "C_DamageMeter.GetAvailableCombatSessions",
+    "C_DamageMeter.GetCombatSessionFromID", "C_DamageMeter.GetCombatSessionFromType" },
+  optional = { "Details", "SendChatMessage" },
+  debugLines = function()
+    local ok, available, why = pcall(C_DamageMeter.IsDamageMeterAvailable)
+    return { "built-in damage meter available: " .. tostring(ok and available) .. (why and (" (" .. tostring(why) .. ")") or "") }
+  end })
+
 SLASH_FLOORISLAVA1 = "/lava"
 SLASH_FLOORISLAVA2 = "/floorislava"
 SlashCmdList.FLOORISLAVA = function(msg)
   msg = strtrim((msg or ""):lower())
-  if msg == "report" then Lava.Report()
+  if msg == "debug" then ns.Core.PrintDebug()
+  elseif msg == "report" then Lava.Report()
   elseif msg == "reset" then wipe(db.tally); db.last = nil; say("board and season tally cleared.")
   elseif msg == "solo" then db.groupOnly = not db.groupOnly; say(db.groupOnly and "only in groups." or "solo fights count too.")
   elseif msg == "quiet" then db.announceLocal = not db.announceLocal; say(db.announceLocal and "champion line on." or "champion line off.")
   elseif msg == "help" then
     say("/lava - the board   /lava report - post the top 3 to your group   /lava solo - count solo fights")
-    say("/lava quiet - no champion line after fights   /lava reset - clear the season tally")
+    say("/lava quiet - no champion line after fights   /lava reset - clear the season tally   /lava debug - check your setup")
   else if ns.Toggle then ns.Toggle() end end
 end
 

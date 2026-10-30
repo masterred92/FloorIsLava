@@ -1,6 +1,6 @@
 <p align="center"><img src="media/logo.png" alt="Floor is Lava logo" width="200"></p>
 
-# Floor is Lava (WoW: Forever) v1.0.0
+# Floor is Lava (WoW: Forever) v1.0.1
 
 [![Tests](https://github.com/masterred92/FloorIsLava/actions/workflows/tests.yml/badge.svg)](https://github.com/masterred92/FloorIsLava/actions/workflows/tests.yml) [![WoW: Forever](https://img.shields.io/badge/WoW%3A%20Forever-Interface%2016001-c8a165)](https://github.com/masterred92/FloorIsLava/blob/main/FloorIsLava.toc) [![Release](https://img.shields.io/github/v/release/masterred92/FloorIsLava?label=release)](https://github.com/masterred92/FloorIsLava/releases) [![License: MIT](https://img.shields.io/github/license/masterred92/FloorIsLava)](https://github.com/masterred92/FloorIsLava/blob/main/LICENSE)
 
@@ -16,6 +16,8 @@ Somebody always stands in the fire. **Floor is Lava** shows who, after every gro
 <p align="center"><img src="media/screenshots/mockup-board.png" alt="Floor is Lava preview" width="560"></p>
 
 **Needs:** Required: [Details! Damage Meter](https://www.curseforge.com/wow/addons/details). The numbers come from the game's own damage meter data (C_DamageMeter).
+
+**Works with:** Uses the Forever client's built-in damage meter, so it works alongside Details! or any other meter.
 
 ## Download
 - **Wago Addons:** coming at launch (Nov 4). The link goes here when the project is live.
