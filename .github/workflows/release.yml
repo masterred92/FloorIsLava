@@ -2,10 +2,12 @@
 # runs the tests, builds the zip with BigWigsMods/packager in dry-run mode (-d, no uploads) and keeps it as a
 # workflow artifact. Nothing goes to CurseForge, Wago or GitHub Releases.
 #
-# To turn publishing on later (after Kenny creates the Wago / CurseForge projects):
+# To turn publishing on later (after Kenny creates the Wago / CurseForge projects), make it match the published
+# addons' release.yml (e.g. NeutralFlip):
 #   1. put the IDs in the TOC (## X-Wago-ID / ## X-Curse-Project-ID, remove the leading "# ")
 #   2. add the repo secrets WAGO_API_TOKEN (and CF_API_TOKEN for CurseForge)
-#   3. add the tag trigger below (push: tags: ['v*']), delete the "-d" argument and the artifact step.
+#   3. replace workflow_dispatch with the tag trigger (push: tags: ['v*']), set permissions to contents: write,
+#      uncomment the env block, delete the "-d" argument and the artifact step.
 name: Package
 
 on:
@@ -31,6 +33,10 @@ jobs:
   package:
     needs: test
     runs-on: ubuntu-latest
+    # env:
+    #   CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+    #   WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+    #   GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}   # packager@v2 reads GITHUB_OAUTH
     steps:
       - uses: actions/checkout@v7
         with:

@@ -12,7 +12,7 @@ local db
 
 local function say(msg) print("|cffff6a00Floor is Lava|r: " .. msg) end
 Lava.say = say
-local function secret(v) return issecretvalue and issecretvalue(v) end
+local secret = ns.Compat.IsSecret -- shared helper (KennyShared)
 
 function Lava.Short(n)
   if n >= 1e6 then return ("%.1fm"):format(n / 1e6) elseif n >= 1e3 then return ("%.1fk"):format(n / 1e3) end
