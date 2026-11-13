@@ -20,9 +20,9 @@ Somebody always stands in the fire. **Floor is Lava** shows who, after every gro
 **Works with:** Uses the Forever client's built-in damage meter, so it works alongside Details! or any other meter.
 
 ## Download
-- **Wago Addons:** coming at launch (Nov 4). The link goes here when the project is live.
-- **CurseForge:** maybe later.
-- **GitHub:** [Releases](https://github.com/masterred92/FloorIsLava/releases) (from the first tagged release) · [Issues](https://github.com/masterred92/FloorIsLava/issues)
+- **CurseForge:** https://www.curseforge.com/wow/addons/floor-is-lava. Author: [MasterRed92](https://www.curseforge.com/members/masterred92/projects).
+- **Wago Addons:** https://addons.wago.io/addons/floorislava.
+- **GitHub:** [Releases](https://github.com/masterred92/FloorIsLava/releases) · [Issues](https://github.com/masterred92/FloorIsLava/issues)
 - **More by Kenny:** [BRBoss](https://github.com/masterred92/BRBoss) · [WipeAndWin](https://github.com/masterred92/WipeAndWin) · [all WoW: Forever addons](https://github.com/masterred92/wow-forever-addons)
 
 ## Commands
