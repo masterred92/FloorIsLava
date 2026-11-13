@@ -2,7 +2,7 @@
 ## Title: Floor is Lava
 ## Notes: Details! plugin: after each fight, crowns whoever took the most avoidable damage. Uses the game's own damage meter.
 ## Author: Kenny
-## Version: 1.0.1
+## Version: 1.0.2
 ## SavedVariables: FloorIsLavaDB
 ## Dependencies: Details
 ## X-License: MIT

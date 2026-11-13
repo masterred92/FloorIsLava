@@ -5,6 +5,7 @@ ignore:
   - tests
   - tools
   - .luacheckrc
+  - media/icon.png
   - media/logo.png
   - media/screenshots
 

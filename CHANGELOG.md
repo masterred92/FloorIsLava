@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.2
+- New store and in-game icon.
+
 ## 1.0.1
 - Checks for the built-in damage meter at login and says so if it is missing.
 - `/lava debug` checks your setup: client version, every game API the addon needs, and which of Kenny's other addons it is working with.

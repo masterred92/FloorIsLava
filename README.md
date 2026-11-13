@@ -1,6 +1,6 @@
 <p align="center"><img src="media/logo.png" alt="Floor is Lava logo" width="200"></p>
 
-# Floor is Lava (WoW: Forever) v1.0.1
+# Floor is Lava (WoW: Forever) v1.0.2
 
 [![Tests](https://github.com/masterred92/FloorIsLava/actions/workflows/tests.yml/badge.svg)](https://github.com/masterred92/FloorIsLava/actions/workflows/tests.yml) [![WoW: Forever](https://img.shields.io/badge/WoW%3A%20Forever-Interface%2016001-c8a165)](https://github.com/masterred92/FloorIsLava/blob/main/FloorIsLava.toc) [![Release](https://img.shields.io/github/v/release/masterred92/FloorIsLava?label=release)](https://github.com/masterred92/FloorIsLava/releases) [![License: MIT](https://img.shields.io/github/license/masterred92/FloorIsLava)](https://github.com/masterred92/FloorIsLava/blob/main/LICENSE)
 
@@ -42,4 +42,4 @@ Put the `FloorIsLava` folder in `World of Warcraft\_forever_\Interface\AddOns\` 
 MIT. Written from scratch; no code copied from other addons. Free, no paid features. It doesn't automate gameplay: everything it does is a reaction you can see or something you typed.
 
 ## Development
-`tests/run.sh [path-to-wow-ui-source-forever]` runs `luac -p`, luacheck, the mock-client tests and (with a path) an API check against Blizzard's Forever UI source and the host addons' source. GitHub Actions runs the tests on every push. The release workflow is a manual dry run that builds the zip with [BigWigsMods/packager](https://github.com/BigWigsMods/packager); publishing is switched off until the Wago project ID is added (see the comments in `.github/workflows/release.yml`).
+`tests/run.sh [path-to-wow-ui-source-forever]` runs `luac -p`, luacheck, the mock-client tests and (with a path) an API check against Blizzard's Forever UI source and the host addons' source. GitHub Actions runs the tests on every push. Releases are packaged by [BigWigsMods/packager](https://github.com/BigWigsMods/packager) only when a `v*` tag is pushed.
